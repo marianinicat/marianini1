@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title> Marianini </title>
+    <style>
+        body {
+            background-color: rgb(216, 241, 125);
+            background-image: url('https://image.freepik.com/vector-gratis/plantilla-fondo-diseno-patron-mandala_1308-44444.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 40%;
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: left;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: px;
+        }
+    </style>
+  </head>
+  <body>
+    <p>
+      TODOS QUEREMOS ENVIARTE UN ABRAZO Y UN MENSAJE EN ESTE DIA ESPECIAL 
+      </br>
+      <strong>CARTULINA -- CARO --  BRUJA -- </strong> 
+      no importa como te llames 
+      <strong>tu ser siempre esatra en nuestra memoria y corazon</strong> y hoy celebramos junto a ti tu cumpleanos 
+  </p>
+    <!--This draws the canvas on the webpage -->
+    <canvas id="mycanvas"></canvas> 
+  </body>
+ 
+  <!-- Include the processing.js library -->
+  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  <script>
+  var programCode = function(processingInstance) {
+    with (processingInstance) {
+      size(400, 400); 
+      frameRate(30);
+        
+      // Paste code from Khan Academy here:
+      fill(255, 255, 0);
+      ellipse(200, 200, 200, 200);
+      noFill();
+      stroke(0, 0, 0);
+      strokeWeight(2);
+      arc(200, 200, 150, 100, 0, PI);
+      fill(0, 0, 0);
+      ellipse(250, 200, 10, 10);
+      ellipse(153, 200, 10, 10);
+    }};
+
+  // Get the canvas that ProcessingJS will use
+  var canvas = document.getElementById("mycanvas"); 
+  // Pass the function to ProcessingJS constructor
+  var processingInstance = new Processing(canvas, programCode); 
+  </script>
+</html>
